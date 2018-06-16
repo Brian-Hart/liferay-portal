@@ -1,0 +1,9 @@
+{
+  "LiferayTheme": {
+    "deployPath": "C:/Users/liferay/Desktop/bundles1/deploy",
+    "themeName": "frontend-theme-admin",
+    "appServerPathTheme": "C:/Users/liferay/Desktop/bundles1/tomcat-8.0.32/webapps/frontend-theme-admin",
+    "deployed": false,
+    "appServerPath": "C:/Users/liferay/Desktop/bundles1/tomcat-8.0.32"
+  }
+}
