@@ -134,6 +134,7 @@ String eventName = ParamUtil.getString(request, "eventName", liferayPortletRespo
 
 			<liferay-ui:search-iterator
 				markupView="lexicon"
+				searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
 			/>
 		</liferay-ui:search-container>
 	</aui:form>

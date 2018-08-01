@@ -257,6 +257,7 @@ else {
 			<liferay-ui:search-iterator
 				markupView="lexicon"
 				resultRowSplitter="<%= kbFolderView ? null : new KBResultRowSplitter() %>"
+				searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
 			/>
 		</liferay-ui:search-container>
 	</aui:form>

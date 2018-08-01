@@ -76,6 +76,7 @@ List<Group> selectedGroups = GroupLocalServiceUtil.getGroups(assetPublisherDispl
 	<liferay-ui:search-iterator
 		markupView="lexicon"
 		paginate="<%= false %>"
+		searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
 	/>
 </liferay-ui:search-container>
 

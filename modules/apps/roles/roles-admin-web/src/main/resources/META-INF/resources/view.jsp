@@ -92,9 +92,18 @@ PortletURL portletURL = viewRolesManagementToolbarDisplayContext.getPortletURL()
 			<%@ include file="/search_columns.jspf" %>
 		</liferay-ui:search-container-row>
 
+		<%
+		String searchResultCssClass = StringPool.BLANK;
+
+		if (displayStyle.equals("list")) {
+			searchResultCssClass = "show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		}
+		%>
+
 		<liferay-ui:search-iterator
 			displayStyle="<%= displayStyle %>"
 			markupView="lexicon"
+			searchResultCssClass="<%= searchResultCssClass %>";
 		/>
 	</liferay-ui:search-container>
 </aui:form>
