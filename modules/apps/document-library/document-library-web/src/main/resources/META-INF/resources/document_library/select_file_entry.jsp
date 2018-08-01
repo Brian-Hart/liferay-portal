@@ -127,6 +127,7 @@ dlSearchContainer.setResults(foldersAndFileEntriesAndFileShortcuts);
 				markupView="lexicon"
 				resultRowSplitter="<%= new DLResultRowSplitter() %>"
 				searchContainer="<%= dlSearchContainer %>"
+				searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
 			/>
 		</liferay-ui:search-container>
 	</aui:form>

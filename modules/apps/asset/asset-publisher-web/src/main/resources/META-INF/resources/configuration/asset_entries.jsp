@@ -86,6 +86,7 @@ List<AssetEntry> assetEntries = AssetPublisherUtil.getAssetEntries(renderRequest
 	<liferay-ui:search-iterator
 		markupView="lexicon"
 		paginate="<%= total > SearchContainer.DEFAULT_DELTA %>"
+		searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
 	/>
 </liferay-ui:search-container>
 

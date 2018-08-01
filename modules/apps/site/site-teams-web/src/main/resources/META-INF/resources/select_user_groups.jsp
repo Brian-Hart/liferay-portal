@@ -121,9 +121,18 @@ SelectUserGroupsDisplayContext selectUserGroupsDisplayContext = new SelectUserGr
 			</c:choose>
 		</liferay-ui:search-container-row>
 
+		<%
+		String searchResultCssClass = StringPool.BLANK;
+
+		if (Objects.equals(selectUserGroupsDisplayContext.getDisplayStyle(), "list")) {
+			searchResultCssClass = "show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		}
+		%>
+
 		<liferay-ui:search-iterator
 			displayStyle="<%= selectUserGroupsDisplayContext.getDisplayStyle() %>"
 			markupView="lexicon"
+			searchResultCssClass="<%= searchResultCssClass %>";
 		/>
 	</liferay-ui:search-container>
 </aui:form>

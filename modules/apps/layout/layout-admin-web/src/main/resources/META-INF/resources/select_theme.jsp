@@ -133,9 +133,18 @@ SelectThemeDisplayContext selectThemeDisplayContext = new SelectThemeDisplayCont
 			</c:choose>
 		</liferay-ui:search-container-row>
 
+		<%
+		String searchResultCssClass = StringPool.BLANK;
+
+		if (Objects.equals(selectThemeDisplayContext.getDisplayStyle(), "list")) {
+			searchResultCssClass = "show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		}
+		%>
+
 		<liferay-ui:search-iterator
 			displayStyle="<%= selectThemeDisplayContext.getDisplayStyle() %>"
 			markupView="lexicon"
+			searchResultCssClass="<%= searchResultCssClass %>";
 		/>
 	</liferay-ui:search-container>
 </aui:form>

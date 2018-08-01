@@ -116,9 +116,18 @@ SelectSiteRolesDisplayContext selectSiteRolesDisplayContext = new SelectSiteRole
 			</c:choose>
 		</liferay-ui:search-container-row>
 
+		<%
+		String searchResultCssClass = StringPool.BLANK;
+
+		if (Objects.equals(selectSiteRolesDisplayContext.getDisplayStyle(), "list")) {
+			searchResultCssClass = "show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		}
+		%>
+
 		<liferay-ui:search-iterator
 			displayStyle="<%= selectSiteRolesDisplayContext.getDisplayStyle() %>"
 			markupView="lexicon"
+			searchResultCssClass="<%= searchResultCssClass %>";
 		/>
 	</liferay-ui:search-container>
 </aui:form>

@@ -182,9 +182,18 @@ ruleGroupSearch.setResults(mdrRuleGroups);
 			</c:choose>
 		</liferay-ui:search-container-row>
 
+		<%
+		String searchResultCssClass = StringPool.BLANK;
+
+		if (displayStyle.equals("list")) {
+			searchResultCssClass = "show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		}
+		%>
+
 		<liferay-ui:search-iterator
 			displayStyle="<%= displayStyle %>"
 			markupView="lexicon"
+			searchResultCssClass="<%= searchResultCssClass %>";
 			type="more"
 		/>
 	</liferay-ui:search-container>

@@ -56,9 +56,18 @@ SelectOrganizationsDisplayContext selectOrganizationsDisplayContext = new Select
 			<%@ include file="/organization_columns.jspf" %>
 		</liferay-ui:search-container-row>
 
+		<%
+		String searchResultCssClass = StringPool.BLANK;
+
+		if (Objects.equals(selectOrganizationsDisplayContext.getDisplayStyle(), "list")) {
+			searchResultCssClass = "show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		}
+		%>
+
 		<liferay-ui:search-iterator
 			displayStyle="<%= selectOrganizationsDisplayContext.getDisplayStyle() %>"
 			markupView="lexicon"
+			searchResultCssClass="<%= searchResultCssClass %>"
 		/>
 	</liferay-ui:search-container>
 </aui:form>

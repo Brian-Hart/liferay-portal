@@ -89,6 +89,7 @@ portletURL.setParameter("sourceVersion", String.valueOf(sourceVersion));
 
 			<liferay-ui:search-iterator
 				markupView="lexicon"
+				searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
 			/>
 		</liferay-ui:search-container>
 	</aui:form>

@@ -132,7 +132,9 @@ else {
 			<aui:button cssClass="selector-button" data="<%= data %>" value="choose-this-category" />
 		</aui:button-row>
 
-		<liferay-ui:search-iterator />
+		<liferay-ui:search-iterator
+			searchResultCssClass="show-quick-actions-on-hover table table-autofit table-heading-nowrap";
+		/>
 	</liferay-ui:search-container>
 </aui:form>
 
